@@ -2,12 +2,12 @@ baseURL = "https://klewis.dev"
 title = "Kye Lewis"
 languageCode = "en-us"
 theme = "researcher"
-publishDir = "docs"
+publishDir = "docs"     # For Github Pages
 
 [params]
 author = "Kye Lewis"
 description = "Software Developer in Sydney, Australia"
-#favicon = "favicon.ico"  # path to a .ico to use as favicon
+#favicon = "favicon.ico"
 
     [params.footer]
     text = "Kye Lewis, Software Developer in Sydney ~ kye@hey.com"
@@ -21,17 +21,14 @@ description = "Software Developer in Sydney, Australia"
     [[menu.main]]
         name = "Posts"
         url = "/posts"
-        weight = 1
+        weight = 2
 
     [[menu.main]]
         name = "Software"
         url = "/software"
-        weight = 1
+        weight = 3
 
-    #[[menu.main]]
-        #name = "Resume"
-        #url = "/resume"
-        #weight = 2
-
-[markup.goldmark.renderer]
-#unsafe = true  # allow raw HTML in markdown files
+    [[menu.main]]
+        name = "Awesome Dotfiles"
+        url = "https://docs.awesomedotfiles.com/"
+        weight = 4
