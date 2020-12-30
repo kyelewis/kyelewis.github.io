@@ -2,6 +2,7 @@ baseURL = "https://klewis.dev"
 title = "Kye Lewis"
 languageCode = "en-us"
 theme = "researcher"
+publishDir = "docs"
 
 [params]
 author = "Kye Lewis"
