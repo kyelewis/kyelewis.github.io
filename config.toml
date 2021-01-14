@@ -23,10 +23,10 @@ description = "Software Developer in Sydney, Australia"
         url = "/posts"
         weight = 2
 
-    [[menu.main]]
-        name = "Software"
-        url = "/software"
-        weight = 3
+#    [[menu.main]]
+#        name = "Software"
+#        url = "/software"
+#        weight = 3
 
     [[menu.main]]
         name = "Awesome Dotfiles"
