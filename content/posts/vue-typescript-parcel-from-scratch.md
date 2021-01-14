@@ -1,6 +1,7 @@
 ---
 title: "Vue and Typescript from scratch using Parcel bundler"
 date: 2021-01-14T21:00:00+11:00
+draft: true
 ---
 
 ## Vue/Typescript with Parcel from scratch
@@ -137,8 +138,8 @@ a simple typescript Vue component.
 </script>
 ```
 ### Make a git commit
-    git add .
-    git commit -m “Initial code commits”
+    # git add .
+    # git commit -m “Initial code commits”
 
 ### Add helpful scripts to package.json
 
@@ -152,16 +153,22 @@ locally to test and to build the end package to upload to a host.
 
 _Or for command line heroes- do it with **jq** instead.._
 
-    echo $(jq '.scripts.serve="parcel serve src/index.html" | .scripts.build="parcel build src/index.html"' package.json) | jq . > package.json
+    # echo $(jq \
+        '.scripts.serve="parcel serve src/index.html" | .scripts.build="parcel build src/index.html"' \package.json) \
+        | jq . > package.new.json && mv package.new.json package.json
 
 ### Make a git commit
 OK, maybe you don't have to make quite this many, but it's a good habit!
 
-    git add .
-    git commit -m “Set up package.json serve and build scripts”
+    # git add .
+    # git commit -m “Set up package.json serve and build scripts”
 
 
 ### Serve and test!
 
-    npm run serve
+    # npm run serve
 
+    > my-project@1.0.0 serve /Users/me/projects/my-project
+    > parcel serve src/index.html
+
+    Server running at http://localhost:1234
