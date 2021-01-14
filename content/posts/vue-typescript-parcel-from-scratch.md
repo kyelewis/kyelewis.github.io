@@ -1,6 +1,6 @@
 ---
 title: "Vue and Typescript from scratch using Parcel bundler"
-date: 2021-01-15T08:00:00+11:00
+date: 2021-01-14T21:00:00+11:00
 ---
 
 ## Vue/Typescript with Parcel from scratch
