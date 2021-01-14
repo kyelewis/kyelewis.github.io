@@ -8,16 +8,6 @@
   </url>
   
   <url>
-    <loc>https://klewis.dev/posts/helloworld/</loc>
-    <lastmod>2020-12-30T17:47:26+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://klewis.dev/posts/</loc>
-    <lastmod>2020-12-30T17:47:26+11:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://klewis.dev/software/</loc>
     <lastmod>2020-12-30T17:47:26+11:00</lastmod>
   </url>
@@ -29,6 +19,10 @@
   
   <url>
     <loc>https://klewis.dev/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://klewis.dev/posts/</loc>
   </url>
   
   <url>
