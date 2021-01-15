@@ -9,14 +9,14 @@
     <lastBuildDate>Thu, 14 Jan 2021 21:00:00 +1100</lastBuildDate><atom:link href="https://klewis.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue and Typescript from scratch using Parcel bundler</title>
-      <link>https://klewis.dev/posts/vue-typescript-parcel-from-scratch-with-images/</link>
+      <link>https://klewis.dev/posts/vue-typescript-parcel-from-scratch/</link>
       <pubDate>Thu, 14 Jan 2021 21:00:00 +1100</pubDate>
       
-      <guid>https://klewis.dev/posts/vue-typescript-parcel-from-scratch-with-images/</guid>
-      <description>Vue/Typescript with Parcel from scratch For developers looking to get quickly on their feet with a reactive Vue app, there are no shortage of templates, quick-starts and project generators for starting a new project.
+      <guid>https://klewis.dev/posts/vue-typescript-parcel-from-scratch/</guid>
+      <description>Vue/Typescript with Parcel from scratch For developers looking to get quickly on their feet with a webapp, there are no shortage of templates, quick-starts and project generators for starting a new project.
 However&amp;hellip; what if you want to create one from scratch?
- 1. Create the project folder If you feel my-project is a little underwhelming, choose a different name.
- 2. Initialise package.json Using -y skips the interactivity and uses all the defaults.</description>
+It&amp;rsquo;s not too hard to do!
+ Setting up our project Create the project folder We need a folder to store our project in- we&amp;rsquo;ll call ours my-project</description>
     </item>
     
   </channel>
