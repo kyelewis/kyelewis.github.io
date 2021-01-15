@@ -32,3 +32,17 @@ description = "Software Developer in Sydney, Australia"
         name = "Awesome Dotfiles"
         url = "https://docs.awesomedotfiles.com/"
         weight = 4
+
+[markup]
+    [markup.highlight]
+        anchorLineNos = false
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ""
+        lineAnchors = ""
+        lineNoStart = 1
+        lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        style = "dracula"
+        tabWidth = 4
