@@ -15,6 +15,14 @@ It's not too hard to do!
 
 ---
 
+# Prerequisites
+
+### Node.JS
+We need Node.JS to provide us with __npm__, the _Node Package Manager_.
+
+Node.JS can be downloaded at [nodejs.org](https://nodejs.org/) - download 
+and install the latest LTS version for your platform.
+
 # Setting up our project
 
 ### Create the project folder
@@ -41,14 +49,6 @@ Wrote to /Users/me/projects/my-project/package.json...
 ```
 
 
-### Start an empty git repository
-We'll use the widely popular _git_ version control system, 
-for keeping track of our code changes.
-```bash
-$ git init
-Initialized empty Git repository in /Users/me/projects/my-project/.git/
-```
-
 ### Install the minimal required packages
 For our web app, __Vue__ and __parcel-bundler__ are the core components.
 
@@ -70,55 +70,22 @@ $ npm install parcel-bundler vue vue-class-components vue-property-decorator
  added 747 packages from 469 contributors and audited 747 packages in 24.557s
 ```
 
-### Create .gitignore
-Typically, we only want to keep source code and resources like images in our source control-
-we can create a .gitignore file to tell git which files not to include.
-
-We have two folders of interest here so far- _node_modules_ contains local package files that npm
-downloads, and _dist_ is the output of our web page. Neither of these are our own source code.
-
-Either create a file named .gitignore with the following contents:
-```
-node_modules
-dist
-```
-
-or use this quick bash command to achieve the same result:
-
-```bash
-$ echo "node_modules\ndist" > .gitignore
-```
-
-
-### Make your first git commit
-Let's get this version control started.
-```bash
-$ git add .                           # Add all files. 
-$ git commit -m "Initialise package"  # Snapshot these in to a new commit with a message
-```
-
 ### Create basic directory structure
 ```bash
 $ mkdir src               # For all of our source code
 $ mkdir dist              # The finished output we can upload to a host
+
+# These three line are MacOS/Linux/WSL only... 
+# On Windows, just create these three files in an editor
 $ touch src/index.ts      # Typescript code
 $ touch src/index.html    # HTML page
 $ touch src/App.vue       # Vue app
 ```
-_Or for those who like to be efficient, **curly brackets expansions** are a neat shell trick!_
+_For linux, MacOS or WSL/WSL2 users who like to be efficient, **curly brackets expansions** are a neat shell trick!_
 ```bash
 $ mkdir {src,dist}          # Expands to mkdir src; mkdir dist;
 $ touch {src/index.ts,src/index.html,src/App.vue}
 ```
-
-### Make another git commit
-Keep it up, it's a good habit to commit regularly, so you have more useful commits to use
-in the future, if you need to roll back. Always include a useful message.
-```bash
-$ git add .
-$ git commit -m "Create file and folder structure"
-```
----
 
 # Starting to write code
 
@@ -179,11 +146,6 @@ a simple typescript Vue component.
     }
 </script>
 ```
-### Make a git commit
-```bash
-$ git add .
-$ git commit -m "Initial code"
-```
 
 ### Add some helpful scripts to package.json
 
@@ -197,14 +159,8 @@ and the second __build__ creates a copy in dist/ for you to upload to a web host
   "build": "parcel build src/index.html"
 },
 ```
-### Make a git commit
-OK, maybe you don't have to make quite this many, but it's a good habit to start.
-```bash
-$ git add .
-$ git commit -m "Set up package.json serve and build scripts"
-```
 
----
+
 # Test your new webapp!
 
 ### Serve and test!
@@ -222,10 +178,10 @@ Visit http://localhost:1234 and enjoy the app!
 
 What will you add next?
 
-# Follow-up Resources
-- Vue.js - https://vuejs.org/
-- Parcel - https://parceljs.org/
-- Typescript - https://www.typescriptlang.org/
-- Git - https://git-scm.com/
-- NPM - https://www.npmjs.com/
+# More Resources
+- Vue.js - [vuejs.org](https://vuejs.org/)
+- Parcel - [parceljs.org](https://parceljs.org/)
+- Typescript - [typescriptlang.org](https://typescriptlang.org/)
+- Git - [git-scm.com](https://git-scm.com/)
+- NPM - [npmjs.com](https://npmjs.com/)
 
