@@ -65,7 +65,7 @@ for starting a new project.</p>
 <p>We need Node.JS to provide us with <strong>npm</strong>, the <em>Node Package Manager</em>.</p>
 <p>Node.JS can be downloaded at <a href="https://nodejs.org/">nodejs.org</a> - download
 and install the latest LTS version for your platform.</p>
-<h1 id="setting-up-our-project">Setting up our project</h1>
+<h1 id="setting-up-your-project">Setting up your project</h1>
 <h3 id="create-the-project-folder">Create the project folder</h3>
 <p>We need a folder to store our project in- we&rsquo;ll call ours <em>my-project</em></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir my-project
@@ -83,34 +83,48 @@ Wrote to /Users/me/projects/my-project/package.json...
 <p>For our web app, <strong>Vue</strong> and <strong>parcel-bundler</strong> are the core components.</p>
 <p><strong>Vue</strong> is a framework to add <em>reactivity</em> to web applications- it allows us to write
 HTML just like a mail-merge email- with placeholders for data we can load or change live in code.</p>
-<p><strong>Parcel</strong> is a program that takes our multiple files and helps link and bundle them
-together into code that we can put directly on a web host.</p>
-<p><em>vue-class-components</em> and <em>vue-property-decorators</em> are used for extra
-syntax when writing Vue apps.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install parcel-bundler vue vue-class-components vue-property-decorator
+    <p><strong>Parcel</strong> is a program that takes our multiple files and helps link and bundle them
+        together into code that we can put directly on a web host.</p>
+    <p><em>vue-class-components</em> and <em>vue-property-decorators</em> are used for extra
+        syntax when writing Vue apps.</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-bash" data-lang="bash">$ npm install parcel-bundler vue vue-class-components vue-property-decorator
  + vue-class-component@7.2.6
  + vue-property-decorator@9.1.2
  + vue@2.6.12
  + parcel-bundler@1.12.4
- added <span style="color:#bd93f9">747</span> packages from <span style="color:#bd93f9">469</span> contributors and audited <span style="color:#bd93f9">747</span> packages in 24.557s
-</code></pre></div><h3 id="create-basic-directory-structure">Create basic directory structure</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir src               <span style="color:#6272a4"># For all of our source code</span>
+ added <span style="color:#bd93f9">747</span> packages from <span style="color:#bd93f9">469</span> contributors and audited <span
+                style="color:#bd93f9">747</span> packages in 24.557s
+</code></pre>
+    </div>
+    <h3 id="create-the-basic-structure">Create the basic structure</h3>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-bash" data-lang="bash">$ mkdir src               <span style="color:#6272a4"># For all of our source code</span>
 $ mkdir dist              <span style="color:#6272a4"># The finished output we can upload to a host</span>
 
-<span style="color:#6272a4"># These three line are MacOS/Linux/WSL only... </span>
+<span style="color:#6272a4"># These three lines are MacOS/Linux/WSL only... </span>
 <span style="color:#6272a4"># On Windows, just create these three files in an editor</span>
 $ touch src/index.ts      <span style="color:#6272a4"># Typescript code</span>
 $ touch src/index.html    <span style="color:#6272a4"># HTML page</span>
 $ touch src/App.vue       <span style="color:#6272a4"># Vue app</span>
-</code></pre></div><p><em>For linux, MacOS or WSL/WSL2 users who like to be efficient, <strong>curly brackets expansions</strong> are a neat shell trick!</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir <span style="color:#ff79c6">{</span>src,dist<span style="color:#ff79c6">}</span>          <span style="color:#6272a4"># Expands to mkdir src; mkdir dist;</span>
+</code></pre>
+    </div>
+    <p><em>For Linux//MacOS/WSL users who like to be efficient, <strong>curly brackets expansions</strong> are a neat
+        shell trick!</em></p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-bash" data-lang="bash">$ mkdir <span style="color:#ff79c6">{</span>src,dist<span
+            style="color:#ff79c6">}</span>          <span
+            style="color:#6272a4"># Expands to mkdir src; mkdir dist;</span>
 $ touch <span style="color:#ff79c6">{</span>src/index.ts,src/index.html,src/App.vue<span style="color:#ff79c6">}</span>
-</code></pre></div><h1 id="starting-to-write-code">Starting to write code</h1>
-<h3 id="creating-indexhtml">Creating index.html</h3>
-<p>This is the only direct HTML file we&rsquo;ll write&hellip;
-a very basic page that includes the script
-that will set up Vue.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span>&gt;
+</code></pre>
+    </div>
+    <h1 id="starting-to-write-code">Starting to write code</h1>
+    <h3 id="creating-indexhtml">Creating index.html</h3>
+    <p>This is the only direct HTML file we&rsquo;ll write&hellip;
+        a very basic page that includes the script
+        that will set up Vue.</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">html</span>&gt;
 
     &lt;<span style="color:#ff79c6">head</span>&gt;
         &lt;<span style="color:#ff79c6">title</span>&gt;My Project&lt;/<span style="color:#ff79c6">title</span>&gt;
@@ -125,45 +139,56 @@ that will set up Vue.</p>
     &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;./index.ts&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
 
 &lt;/<span style="color:#ff79c6">html</span>&gt;
-</code></pre></div><h3 id="creating-indexts">Creating index.ts</h3>
-<p>This code imports the Vue framework and our App component, and links them together.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">import</span> Vue from <span style="color:#f1fa8c">&#34;vue&#34;</span>               <span style="color:#6272a4">// Import the Vue framework
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> App from <span style="color:#f1fa8c">&#34;./App.vue&#34;</span>         <span style="color:#6272a4">// Import your Vue Single File Component (SFC)
+</code></pre>
+    </div>
+    <h3 id="creating-indexts">Creating index.ts</h3>
+    <p>This code imports the Vue framework and our App component, and links them together.</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">import</span> Vue from <span
+            style="color:#f1fa8c">&#34;vue&#34;</span>               <span style="color:#6272a4">// Import the Vue framework
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">import</span> App from <span
+            style="color:#f1fa8c">&#34;./App.vue&#34;</span>         <span style="color:#6272a4">// Import your Vue Single File Component (SFC)
 </span><span style="color:#6272a4"></span>
 <span style="color:#6272a4">// Create a new Vue instance using your App as the render function
 </span><span style="color:#6272a4">// and mount to the HTML element with the selector #app
 </span><span style="color:#6272a4"></span>
-<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#ff79c6">new</span> Vue({render<span style="color:#ff79c6">:</span> h =&gt; h(App)})
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span
+                style="color:#ff79c6">new</span> Vue({render<span style="color:#ff79c6">:</span> h =&gt; h(App)})
     .$mount(<span style="color:#f1fa8c">&#34;#app&#34;</span>)
-</code></pre></div><h3 id="appvue">App.vue</h3>
-<p>This is the fun part. We&rsquo;re using the Vue <em>SFC</em> (Single File Component) format here to write
-a simple typescript Vue component.</p>
-<div class="highlight"><pre
-        style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
-        class="language-vue" data-lang="vue">&lt;<span style="color:#ff79c6">template</span>&gt;
+</code></pre>
+    </div>
+    <h3 id="creating-appvue">Creating App.vue</h3>
+    <p>This is the fun part. We&rsquo;re using the Vue <em>SFC</em> (Single File Component) format here to write
+        a simple typescript Vue component.</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-vue" data-lang="vue">&lt;<span style="color:#ff79c6">template</span>&gt;
     <span style="color:#6272a4">&lt;!--</span> Our HTML code including placeholder <span
-            style="color:#ff79c6">--&gt;</span>
+                style="color:#ff79c6">--&gt;</span>
     &lt;<span style="color:#ff79c6">div</span>&gt;{{ helloWorld }}&lt;/<span style="color:#ff79c6">div</span>&gt;
 &lt;/<span style="color:#ff79c6">template</span>&gt;
 
 
 &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">lang</span><span
-            style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;ts&#34;</span>&gt;
+                style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;ts&#34;</span>&gt;
     <span style="color:#ff79c6">import</span> { Vue, Component } from <span style="color:#f1fa8c">&#34;vue-property-decorator&#34;</span>
 
     @Component({})
     <span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#ff79c6">class</span> MyProjectApp <span
-            style="color:#ff79c6">extends</span> Vue {
+                style="color:#ff79c6">extends</span> Vue {
       
         <span style="color:#6272a4">// Defining some text that we&#39;ll reference above.
-</span><span style="color:#6272a4"></span>        helloWorld<span style="color:#ff79c6">:</span> string <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello, World!&#34;</span>
+</span><span style="color:#6272a4"></span>        helloWorld<span style="color:#ff79c6">:</span> string <span
+                style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello, World!&#34;</span>
       
     }
 &lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><h3 id="add-some-helpful-scripts-to-packagejson">Add some helpful scripts to package.json</h3>
-<p>The package.json has a section for including scripts that you can run and reference later.</p>
-<p>Add these two to your package.json scripts section- the first <strong>serve</strong> runs your website locally for your to test,
-and the second <strong>build</strong> creates a copy in dist/ for you to upload to a web host.</p>
+</code></pre>
+    </div>
+    <h3 id="add-some-helpful-scripts-to-packagejson">Add some helpful scripts to package.json</h3>
+    <p>The package.json has a section for including scripts that you can run and reference later.</p>
+    <p>Add these two to your package.json scripts section- the first <strong>serve</strong> runs your website locally
+        for your to test,
+        and the second <strong>build</strong> creates a copy in dist/ for you to upload to a web host.</p>
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
             class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;scripts&#34;</span>: {
@@ -174,16 +199,19 @@ and the second <strong>build</strong> creates a copy in dist/ for you to upload 
 </code></pre>
     </div>
     <h1 id="test-your-new-webapp">Test your new webapp!</h1>
-<h3 id="serve-and-test">Serve and test!</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm run serve
+    <h3 id="serve-and-test">Serve and test!</h3>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code
+            class="language-bash" data-lang="bash">$ npm run serve
 
  &gt; my-project@1.0.0 serve /Users/me/projects/my-project
  &gt; parcel serve src/index.html
 
  Server running at http://localhost:1234
-</code></pre></div><h3 id="open-your-web-browser">Open your web browser</h3>
-<p>Visit http://localhost:1234 and enjoy the app!</p>
-<p>What will you add next?</p>
+</code></pre>
+    </div>
+    <h3 id="open-your-web-browser">Open your web browser</h3>
+    <p>Visit http://localhost:1234 and enjoy the app!</p>
+    <p>What will you add next?</p>
 <h1 id="more-resources">More Resources</h1>
 <ul>
 <li>Vue.js - <a href="https://vuejs.org/">vuejs.org</a></li>
