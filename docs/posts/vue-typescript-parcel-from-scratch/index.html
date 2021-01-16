@@ -60,6 +60,11 @@ for starting a new project.</p>
 <p><strong>However&hellip; what if you want to create one from scratch?</strong></p>
 <p>It&rsquo;s not too hard to do!</p>
 <hr>
+<h1 id="prerequisites">Prerequisites</h1>
+<h3 id="nodejs">Node.JS</h3>
+<p>We need Node.JS to provide us with <strong>npm</strong>, the <em>Node Package Manager</em>.</p>
+<p>Node.JS can be downloaded at <a href="https://nodejs.org/">nodejs.org</a> - download
+and install the latest LTS version for your platform.</p>
 <h1 id="setting-up-our-project">Setting up our project</h1>
 <h3 id="create-the-project-folder">Create the project folder</h3>
 <p>We need a folder to store our project in- we&rsquo;ll call ours <em>my-project</em></p>
@@ -74,11 +79,6 @@ need to make our app happen.</p>
 and answer the questions in the built-in questionaire.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm init -y
 Wrote to /Users/me/projects/my-project/package.json...
-</code></pre></div><h3 id="start-an-empty-git-repository">Start an empty git repository</h3>
-<p>We&rsquo;ll use the widely popular <em>git</em> version control system,
-for keeping track of our code changes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init
-Initialized empty Git repository in /Users/me/projects/my-project/.git/
 </code></pre></div><h3 id="install-the-minimal-required-packages">Install the minimal required packages</h3>
 <p>For our web app, <strong>Vue</strong> and <strong>parcel-bundler</strong> are the core components.</p>
 <p><strong>Vue</strong> is a framework to add <em>reactivity</em> to web applications- it allows us to write
@@ -93,36 +93,19 @@ syntax when writing Vue apps.</p>
  + vue@2.6.12
  + parcel-bundler@1.12.4
  added <span style="color:#bd93f9">747</span> packages from <span style="color:#bd93f9">469</span> contributors and audited <span style="color:#bd93f9">747</span> packages in 24.557s
-</code></pre></div><h3 id="create-gitignore">Create .gitignore</h3>
-<p>Typically, we only want to keep source code and resources like images in our source control-
-we can create a .gitignore file to tell git which files not to include.</p>
-<p>We have two folders of interest here so far- <em>node_modules</em> contains local package files that npm
-downloads, and <em>dist</em> is the output of our web page. Neither of these are our own source code.</p>
-<p>Either create a file named .gitignore with the following contents:</p>
-<pre><code>node_modules
-dist
-</code></pre><p>or use this quick bash command to achieve the same result:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;node_modules\ndist&#34;</span> &gt; .gitignore
-</code></pre></div><h3 id="make-your-first-git-commit">Make your first git commit</h3>
-<p>Let&rsquo;s get this version control started.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .                           <span style="color:#6272a4"># Add all files. </span>
-$ git commit -m <span style="color:#f1fa8c">&#34;Initialise package&#34;</span>  <span style="color:#6272a4"># Snapshot these in to a new commit with a message</span>
 </code></pre></div><h3 id="create-basic-directory-structure">Create basic directory structure</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir src               <span style="color:#6272a4"># For all of our source code</span>
 $ mkdir dist              <span style="color:#6272a4"># The finished output we can upload to a host</span>
+
+<span style="color:#6272a4"># These three line are MacOS/Linux/WSL only... </span>
+<span style="color:#6272a4"># On Windows, just create these three files in an editor</span>
 $ touch src/index.ts      <span style="color:#6272a4"># Typescript code</span>
 $ touch src/index.html    <span style="color:#6272a4"># HTML page</span>
 $ touch src/App.vue       <span style="color:#6272a4"># Vue app</span>
-</code></pre></div><p><em>Or for those who like to be efficient, <strong>curly brackets expansions</strong> are a neat shell trick!</em></p>
+</code></pre></div><p><em>For linux, MacOS or WSL/WSL2 users who like to be efficient, <strong>curly brackets expansions</strong> are a neat shell trick!</em></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir <span style="color:#ff79c6">{</span>src,dist<span style="color:#ff79c6">}</span>          <span style="color:#6272a4"># Expands to mkdir src; mkdir dist;</span>
 $ touch <span style="color:#ff79c6">{</span>src/index.ts,src/index.html,src/App.vue<span style="color:#ff79c6">}</span>
-</code></pre></div><h3 id="make-another-git-commit">Make another git commit</h3>
-<p>Keep it up, it&rsquo;s a good habit to commit regularly, so you have more useful commits to use
-in the future, if you need to roll back. Always include a useful message.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .
-$ git commit -m <span style="color:#f1fa8c">&#34;Create file and folder structure&#34;</span>
-</code></pre></div><hr>
-<h1 id="starting-to-write-code">Starting to write code</h1>
+</code></pre></div><h1 id="starting-to-write-code">Starting to write code</h1>
 <h3 id="creating-indexhtml">Creating index.html</h3>
 <p>This is the only direct HTML file we&rsquo;ll write&hellip;
 a very basic page that includes the script
@@ -172,9 +155,6 @@ a simple typescript Vue component.</p>
       
     }
 &lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><h3 id="make-a-git-commit">Make a git commit</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .
-$ git commit -m <span style="color:#f1fa8c">&#34;Initial code&#34;</span>
 </code></pre></div><h3 id="add-some-helpful-scripts-to-packagejson">Add some helpful scripts to package.json</h3>
 <p>The package.json has a section for including scripts that you can run and reference later.</p>
 <p>Add these two to your package.json scripts section- the first <strong>serve</strong> runs your website locally for your to test,
@@ -183,12 +163,7 @@ and the second <strong>build</strong> creates a copy in dist/ for you to upload 
   <span style="color:#ff79c6">&#34;serve&#34;</span>: <span style="color:#f1fa8c">&#34;parcel serve src/index.html&#34;</span>,
   <span style="color:#ff79c6">&#34;build&#34;</span>: <span style="color:#f1fa8c">&#34;parcel build src/index.html&#34;</span>
 },
-</code></pre></div><h3 id="make-a-git-commit-1">Make a git commit</h3>
-<p>OK, maybe you don&rsquo;t have to make quite this many, but it&rsquo;s a good habit to start.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .
-$ git commit -m <span style="color:#f1fa8c">&#34;Set up package.json serve and build scripts&#34;</span>
-</code></pre></div><hr>
-<h1 id="test-your-new-webapp">Test your new webapp!</h1>
+</code></pre></div><h1 id="test-your-new-webapp">Test your new webapp!</h1>
 <h3 id="serve-and-test">Serve and test!</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm run serve
 
@@ -199,13 +174,13 @@ $ git commit -m <span style="color:#f1fa8c">&#34;Set up package.json serve and b
 </code></pre></div><h3 id="open-your-web-browser">Open your web browser</h3>
 <p>Visit http://localhost:1234 and enjoy the app!</p>
 <p>What will you add next?</p>
-<h1 id="follow-up-resources">Follow-up Resources</h1>
+<h1 id="more-resources">More Resources</h1>
 <ul>
-<li>Vue.js - <a href="https://vuejs.org/">https://vuejs.org/</a></li>
-<li>Parcel - <a href="https://parceljs.org/">https://parceljs.org/</a></li>
-<li>Typescript - <a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a></li>
-<li>Git - <a href="https://git-scm.com/">https://git-scm.com/</a></li>
-<li>NPM - <a href="https://www.npmjs.com/">https://www.npmjs.com/</a></li>
+<li>Vue.js - <a href="https://vuejs.org/">vuejs.org</a></li>
+<li>Parcel - <a href="https://parceljs.org/">parceljs.org</a></li>
+<li>Typescript - <a href="https://typescriptlang.org/">typescriptlang.org</a></li>
+<li>Git - <a href="https://git-scm.com/">git-scm.com</a></li>
+<li>NPM - <a href="https://npmjs.com/">npmjs.com</a></li>
 </ul>
 
 </div>

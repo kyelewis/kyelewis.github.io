@@ -16,7 +16,8 @@
       <description>Vue/Typescript with Parcel from scratch For developers looking to get quickly on their feet with a webapp, there are no shortage of templates, quick-starts and project generators for starting a new project.
 However&amp;hellip; what if you want to create one from scratch?
 It&amp;rsquo;s not too hard to do!
- Setting up our project Create the project folder We need a folder to store our project in- we&amp;rsquo;ll call ours my-project</description>
+ Prerequisites Node.JS We need Node.JS to provide us with npm, the Node Package Manager.
+Node.JS can be downloaded at nodejs.org - download and install the latest LTS version for your platform.</description>
     </item>
     
   </channel>
