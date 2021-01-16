@@ -127,7 +127,7 @@ export default new Vue({render: h => h(App)})
 This is the fun part. We're using the Vue _SFC_ (Single File Component) format here to write
 a simple typescript Vue component.
 
-```Vue
+```vue
 <template>
     <!-- Our HTML code including placeholder -->
     <div>{{ helloWorld }}</div>
@@ -154,10 +154,12 @@ The package.json has a section for including scripts that you can run and refere
 Add these two to your package.json scripts section- the first __serve__ runs your website locally for your to test,
 and the second __build__ creates a copy in dist/ for you to upload to a web host.
 ```json
-"scripts": {
-  "serve": "parcel serve src/index.html",
-  "build": "parcel build src/index.html"
-},
+{
+  "scripts": {
+    "serve": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
+  }
+}
 ```
 
 
