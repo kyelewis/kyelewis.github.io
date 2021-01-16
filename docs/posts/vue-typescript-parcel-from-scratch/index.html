@@ -105,22 +105,22 @@ dist
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;node_modules\ndist&#34;</span> &gt; .gitignore
 </code></pre></div><h3 id="make-your-first-git-commit">Make your first git commit</h3>
 <p>Let&rsquo;s get this version control started.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git add .                           <span style="color:#6272a4"># Add all files. </span>
-    git commit -m <span style="color:#f1fa8c">&#34;Initialise package&#34;</span>  <span style="color:#6272a4"># Snapshot these in to a new commit with a message</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .                           <span style="color:#6272a4"># Add all files. </span>
+$ git commit -m <span style="color:#f1fa8c">&#34;Initialise package&#34;</span>  <span style="color:#6272a4"># Snapshot these in to a new commit with a message</span>
 </code></pre></div><h3 id="create-basic-directory-structure">Create basic directory structure</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    mkdir src               <span style="color:#6272a4"># For all of our source code</span>
-    mkdir dist              <span style="color:#6272a4"># The finished output we can upload to a host</span>
-    touch src/index.ts      <span style="color:#6272a4"># Typescript code</span>
-    touch src/index.html    <span style="color:#6272a4"># HTML page</span>
-    touch src/App.vue       <span style="color:#6272a4"># Vue app</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir src               <span style="color:#6272a4"># For all of our source code</span>
+$ mkdir dist              <span style="color:#6272a4"># The finished output we can upload to a host</span>
+$ touch src/index.ts      <span style="color:#6272a4"># Typescript code</span>
+$ touch src/index.html    <span style="color:#6272a4"># HTML page</span>
+$ touch src/App.vue       <span style="color:#6272a4"># Vue app</span>
 </code></pre></div><p><em>Or for those who like to be efficient, <strong>curly brackets expansions</strong> are a neat shell trick!</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    mkdir <span style="color:#ff79c6">{</span>src,dist<span style="color:#ff79c6">}</span>          <span style="color:#6272a4"># Expands to mkdir src; mkdir dist;</span>
-    touch <span style="color:#ff79c6">{</span>src/index.ts,src/index.html,src/App.vue<span style="color:#ff79c6">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir <span style="color:#ff79c6">{</span>src,dist<span style="color:#ff79c6">}</span>          <span style="color:#6272a4"># Expands to mkdir src; mkdir dist;</span>
+$ touch <span style="color:#ff79c6">{</span>src/index.ts,src/index.html,src/App.vue<span style="color:#ff79c6">}</span>
 </code></pre></div><h3 id="make-another-git-commit">Make another git commit</h3>
 <p>Keep it up, it&rsquo;s a good habit to commit regularly, so you have more useful commits to use
 in the future, if you need to roll back. Always include a useful message.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    git add .
-    git commit -m <span style="color:#f1fa8c">&#34;Create file and folder structure&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add .
+$ git commit -m <span style="color:#f1fa8c">&#34;Create file and folder structure&#34;</span>
 </code></pre></div><hr>
 <h1 id="starting-to-write-code">Starting to write code</h1>
 <h3 id="creating-indexhtml">Creating index.html</h3>
