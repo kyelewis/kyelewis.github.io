@@ -93,30 +93,30 @@ $ echo "node_modules\ndist" > .gitignore
 ### Make your first git commit
 Let's get this version control started.
 ```bash
-    git add .                           # Add all files. 
-    git commit -m "Initialise package"  # Snapshot these in to a new commit with a message
+$ git add .                           # Add all files. 
+$ git commit -m "Initialise package"  # Snapshot these in to a new commit with a message
 ```
 
 ### Create basic directory structure
 ```bash
-    mkdir src               # For all of our source code
-    mkdir dist              # The finished output we can upload to a host
-    touch src/index.ts      # Typescript code
-    touch src/index.html    # HTML page
-    touch src/App.vue       # Vue app
+$ mkdir src               # For all of our source code
+$ mkdir dist              # The finished output we can upload to a host
+$ touch src/index.ts      # Typescript code
+$ touch src/index.html    # HTML page
+$ touch src/App.vue       # Vue app
 ```
 _Or for those who like to be efficient, **curly brackets expansions** are a neat shell trick!_
 ```bash
-    mkdir {src,dist}          # Expands to mkdir src; mkdir dist;
-    touch {src/index.ts,src/index.html,src/App.vue}
+$ mkdir {src,dist}          # Expands to mkdir src; mkdir dist;
+$ touch {src/index.ts,src/index.html,src/App.vue}
 ```
 
 ### Make another git commit
 Keep it up, it's a good habit to commit regularly, so you have more useful commits to use
 in the future, if you need to roll back. Always include a useful message.
 ```bash
-    git add .
-    git commit -m "Create file and folder structure"
+$ git add .
+$ git commit -m "Create file and folder structure"
 ```
 ---
 
