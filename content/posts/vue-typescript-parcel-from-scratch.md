@@ -23,7 +23,7 @@ We need Node.JS to provide us with __npm__, the _Node Package Manager_.
 Node.JS can be downloaded at [nodejs.org](https://nodejs.org/) - download 
 and install the latest LTS version for your platform.
 
-# Setting up our project
+# Setting up your project
 
 ### Create the project folder
 We need a folder to store our project in- we'll call ours _my-project_
@@ -70,18 +70,19 @@ $ npm install parcel-bundler vue vue-class-components vue-property-decorator
  added 747 packages from 469 contributors and audited 747 packages in 24.557s
 ```
 
-### Create basic directory structure
+### Create the basic structure
 ```bash
 $ mkdir src               # For all of our source code
 $ mkdir dist              # The finished output we can upload to a host
 
-# These three line are MacOS/Linux/WSL only... 
+# These three lines are MacOS/Linux/WSL only... 
 # On Windows, just create these three files in an editor
 $ touch src/index.ts      # Typescript code
 $ touch src/index.html    # HTML page
 $ touch src/App.vue       # Vue app
 ```
-_For linux, MacOS or WSL/WSL2 users who like to be efficient, **curly brackets expansions** are a neat shell trick!_
+
+_For Linux//MacOS/WSL users who like to be efficient, **curly brackets expansions** are a neat shell trick!_
 ```bash
 $ mkdir {src,dist}          # Expands to mkdir src; mkdir dist;
 $ touch {src/index.ts,src/index.html,src/App.vue}
@@ -123,7 +124,8 @@ import App from "./App.vue"         // Import your Vue Single File Component (SF
 export default new Vue({render: h => h(App)})
     .$mount("#app")
 ```
-### App.vue
+
+### Creating App.vue
 This is the fun part. We're using the Vue _SFC_ (Single File Component) format here to write
 a simple typescript Vue component.
 
